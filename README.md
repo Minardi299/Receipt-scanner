@@ -8,7 +8,7 @@ To download Tesseract: https://github.com/UB-Mannheim/tesseract/wiki
 To process and improve read quality: https://github.com/tesseract-ocr/tessdoc/blob/main/ImproveQuality.md
 
 # EXAMPLE
-From ![alt text](TestingImgs/test1.jpeg) To ![alt text](temp/NANORemoveNoise.jpg)
+From ![alt text](temp/test1.jpeg) To ![alt text](temp/NANORemoveNoise.jpg)
 The digitized result:
 
 {
@@ -29,5 +29,5 @@ The digitized result:
 The model being used is a Mixtral-8x7B that's on the local network, bound to port 11434 and can be access via a curl 
 ![alt text](temp/postman_example.png) 
 or in this case through OpenAI api and its library with python.
-Example of api being call:
+Example of an api being call:
 ![alt text](temp/image-1.png)

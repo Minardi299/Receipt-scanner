@@ -1,6 +1,0 @@
-{
-"name": "Costco",
-"location": "1000 Boul. Saint Bruno, Saint Bruno, QC J3V 6P4",
-"cardType": "MasterCard",
-"amount": "73.70"
-}

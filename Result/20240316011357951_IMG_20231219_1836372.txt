@@ -1,6 +1,0 @@
-{
-"name": "Marche C&T",
-"location": "8200 Boul Taschereau #1300, Brossard QC. J4X 256",
-"cardType": "MasterCard",
-"amount": "39.63"
-}
