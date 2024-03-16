@@ -1,7 +1,7 @@
 # imgToText
-An OCR tool using Tesseract 4.1.1 with the pytesseract librabry to read an image and OpenCV to pre process and prepare the image for better OCR results. Currently implementing a local host LLm model mixtral through langchain to further cross check and enhance the accuracy of the OCR result
+An OCR tool using Tesseract 4.1.1 with the pytesseract librabry to read an image and OpenCV to pre process and prepare the image for better OCR results. Currently implementing a local host LLm model mixtral through OpenAI api to further cross check and enhance the accuracy of the OCR result
 
-The program will check the TODO folder to check if there's any image to convert, if there is, it will use tesseract to read words from an image of a receipt and will return a JSON object with the help of a LLM model.
+The program will check the TODO folder to check if there's any image to convert, if there is it will call the img_to_string() function from the img_processing_main.py. The function would process the image, then use tesseract to scan the recipe and return a json object with another function calling to the chatopenai.py
 
 To download Tesseract: https://github.com/UB-Mannheim/tesseract/wiki
 
