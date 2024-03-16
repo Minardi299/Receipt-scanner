@@ -31,3 +31,5 @@ The model being used is a Mixtral-8x7B that's on the local network, bound to por
 or in this case through OpenAI api and its library with python.
 Example of an api being call:
 ![alt text](temp/image-1.png)
+Demonstration:
+https://youtu.be/MbMMRIxiJ54
