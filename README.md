@@ -1,3 +1,5 @@
+Demonstration:
+https://youtu.be/MbMMRIxiJ54
 # imgToText
 An OCR tool using Tesseract 4.1.1 with the pytesseract librabry to read an image and OpenCV to pre process and prepare the image for better OCR results. Currently implementing a local host LLm model mixtral through OpenAI api to further cross check and enhance the accuracy of the OCR result
 
@@ -31,5 +33,3 @@ The model being used is a Mixtral-8x7B that's on the local network, bound to por
 or in this case through OpenAI api and its library with python.
 Example of an api being call:
 ![alt text](temp/image-1.png)
-Demonstration:
-https://youtu.be/MbMMRIxiJ54
