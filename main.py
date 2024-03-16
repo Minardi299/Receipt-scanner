@@ -5,8 +5,7 @@ import cv2
 from pdf_processing import *
 from date_time import get_current_time
 from img_processing_main import *
-#if tessearct if not added to the path yet then use this code to point to the folder that teserract is in
-# pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\Tesseract-OCR\\tesseract.exe'
+
 to_check_folder =Path('TODO')
 destination_folder=Path('Result')
 

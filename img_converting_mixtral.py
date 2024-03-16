@@ -60,8 +60,8 @@ thick_font = thickening_font(resized_img)
 
 # Use Tesseract to extract text from the preprocessed image
 # box=get_boxes(thick_font)
-cv2.imwrite("processed/mixtralemoveNoise.jpg", thick_font)
-text = pytesseract.image_to_string(thick_font, lang='eng', config='--psm 6')
-destination_path = f"Result/mixtral.txt"
-with open(destination_path,'w') as file:
-    file.write(text)
+# cv2.imwrite("processed/mixtralemoveNoise.jpg", thick_font)
+# text = pytesseract.image_to_string(thick_font, lang='eng', config='--psm 6')
+# destination_path = f"Result/mixtral.txt"
+# with open(destination_path,'w') as file:
+#     file.write(text)

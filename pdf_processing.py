@@ -16,7 +16,7 @@ def is_searchable(path: Path) -> bool:
     return False
 
 def extract_searchable(path: Path) ->str:
-    doc = fitz.open(path) # open a document
+    doc = fitz.open(path) 
     text=''
     for page in doc:
         text+=page.get_text()
@@ -30,7 +30,7 @@ def extract_scanned(path: Path) :
     mat = fitz.Matrix(zoom, zoom)
 
     for page_index in range(len(doc)):
-        page = doc[page_index] #number of page
+        page = doc[page_index]
         img = page.get_images()
         pix = page.get_pixmap(matrix = mat)
         img=pix.pil_tobytes("JPEG")

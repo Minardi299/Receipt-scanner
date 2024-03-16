@@ -1,7 +1,15 @@
 import cv2
 import numpy as np
 import pytesseract
+from chatopenai import *
 
+
+def thickening_font(img: np.ndarray) -> np.ndarray:
+    img=cv2.bitwise_not(img)
+    kernel=np.ones((2,2),np.uint8)
+    img=cv2.dilate(img,kernel,iterations=1)
+    img=cv2.bitwise_not(img)
+    return img
 
 # get grayscale image
 def get_grayscale(image):
@@ -67,6 +75,7 @@ def process_img(img: np.ndarray) -> np.ndarray:
     img = cv2.erode(img, kernel, iterations=1)
     img = cv2.adaptiveThreshold(img, 210, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 15, 10)
     img = remove_noise(img)
+    img=thickening_font(img)
     return img
 
 #template matching
@@ -75,18 +84,22 @@ def match_template(image, template):
 
 def img_to_string(img: np.ndarray) -> str:
     processed_img = process_img(img)
-    text =pytesseract.image_to_string(processed_img)  
+    text =convert_json(pytesseract.image_to_string(processed_img))
     return text
 
 if __name__ == '__main__':
-    # MG_20231219_183628
+
     #IMG_20231219_1836282
+    #IMG_20240316_002532
     img=cv2.imread('TestingImgs/test1.jpeg')
     fixed = process_img(img)
-    cv2.imwrite("temp/test2.jpg", fixed)
+    cv2.imwrite("processed/test2.jpg", fixed)
 
 
     text =pytesseract.image_to_string(fixed)
+    # print (text)
+    print(convert_json(text))
+
     # destination_path = f"Result/NANO.txt"
     # with open(destination_path,'w') as file:
     #     file.write(text)

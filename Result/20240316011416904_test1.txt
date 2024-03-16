@@ -1,0 +1,6 @@
+{
+"name": "Main Street Restaurant",
+"location": "6332 Business Drive, Suite 528, Palo Alto California 94301",
+"cardType": "Discover",
+"amount": "29.01"
+}
